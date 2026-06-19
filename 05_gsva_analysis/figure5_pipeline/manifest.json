@@ -1,0 +1,11 @@
+{
+  "files": [
+    "README.md",
+    "scripts/02_prepare_expand1_expand2_gene_sets.py",
+    "scripts/03_make_highest_level_pseudobulk_expression.py",
+    "scripts/04_run_pseudobulk_gsva.R",
+    "scripts/05_compute_pseudobulk_rstar_stats.py",
+    "scripts/06_plot_highest_level_pseudobulk_rstar.py",
+    "scripts/run_stage1_figure5.sh"
+  ]
+}

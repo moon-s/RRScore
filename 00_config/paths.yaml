@@ -1,0 +1,62 @@
+# Shared path defaults for the RLS single-cell MR / Borzoi / RWR / GSVA manuscript code.
+# These preserve absolute defaults observed in the original scripts. They are documentation
+# and optional configuration only; scripts should keep their existing defaults unless explicitly refactored.
+project:
+  code_root: /mnt/f/13_scMR_/_code          # Original working code tree.
+  publication_code_root: /mnt/f/13_scMR_/_code_publication_ready  # Cleaned copy created for manuscript release.
+  data_root: /mnt/f/13_scMR_/_data          # Primary large input/intermediate data root.
+  results_root: /mnt/f/13_scMR_/results     # Manuscript figure/table output root.
+
+reference:
+  hg38_fasta: /mnt/f/13_scMR_/_data/hg_index/hg38.fa
+  hg38_refgene_gtf_gz: /mnt/f/13_scMR_/_data/hg_index/hg38.refGene.gtf.gz
+  borzoi_model_dir: /mnt/f/13_scMR_/_data/borzoi_model/flashzoi-replicate-0
+  borzoi_targets_human: /mnt/f/13_scMR_/_data/borzoi_model/flashzoi-replicate-0/targets_human.txt
+
+processing_datasets:
+  dhs_snv_dir: /mnt/f/13_scMR_/_data/dhs_snv
+  primary_dhs_rsid: /mnt/f/13_scMR_/_data/dhs_snv/rsid_in_primary_DHS_all_components.tsv.gz
+  finngen_rls_sumstats: /mnt/f/13_scMR_/_data/dhs_snv/summary_stats_release_finngen_R12_G6_RLS.gz
+  mr_ready_dir: /mnt/f/13_scMR_/_data/MR_ready
+  processed_training_dir: /mnt/f/13_scMR_/_data/processed/training
+  rls_causal_genes_dir: /mnt/f/13_scMR_/_data/rls_causal_genes
+
+processing_borzoi:
+  output_dir: /mnt/f/13_scMR_/_data/processing_borzoi_outputs
+  expression_deltas: /mnt/f/13_scMR_/_data/processing_borzoi_outputs/expression_deltas.parquet
+  expression_delta_chunks: /mnt/f/13_scMR_/_data/processing_borzoi_outputs/expression_deltas.chunks
+  regulatory_variants: /mnt/f/13_scMR_/_data/processing_borzoi_outputs/regulatory_variants.parquet
+  selected_regulatory_snv_dhs_per_gene: /mnt/f/13_scMR_/_data/processing_borzoi_outputs/selected_regulatory_snv_dhs_per_gene.parquet
+  regulatory_to_gwas_ld_v3: /mnt/f/13_scMR_/_data/processing_borzoi_outputs/step6_regulatory_to_gwas_ld_v3.parquet
+
+mr_analysis:
+  ldclump_blood_bulk: /mnt/f/13_scMR_/_data/MR_ready/ldclump_dhs_blood_bulk_r2_01
+  ldclump_blood_sceqtl: /mnt/f/13_scMR_/_data/MR_ready/ldclump_dhs_blood_sceqtl_r2_01
+  ldclump_brain_bulk: /mnt/f/13_scMR_/_data/MR_ready/ldclump_dhs_brain_bulk_r2_01
+  ldclump_brain_sceqtl: /mnt/f/13_scMR_/_data/MR_ready/ldclump_dhs_brain_sceqtl_r2_01
+
+network:
+  graph_learning_dir: /mnt/f/13_scMR_/_data/network/graph_learning_borzoi_mr
+  final_calibrated_brain_model_dir: /mnt/f/13_scMR_/_data/network/graph_learning_borzoi_mr/final_calibrated_brain_model
+  final_brain_gene_support_tiers: /mnt/f/13_scMR_/_data/network/graph_learning_borzoi_mr/final_calibrated_brain_model/final_brain_gene_support_tiers.tsv
+  tissue_level_mr_seeds: /mnt/f/13_scMR_/_data/network/tissue_level_mr_seeds.tsv
+  manuscript_tables_dir: /mnt/f/13_scMR_/_data/network/graph_learning_borzoi_mr/manuscript_tables
+
+gsva:
+  analysis_root: /mnt/f/13_scMR_/_data/analysis_borzoi_mr_sc
+  bulk_brain_model_gene_sets_dir: /mnt/f/13_scMR_/_data/analysis_borzoi_mr_sc/bulk_gsva_brain_model_gene_sets
+  singlecell_brain_model_gene_sets_dir: /mnt/f/13_scMR_/_data/analysis_borzoi_mr_sc/singlecell_gsva_brain_model_gene_sets
+  brain_mr_model_gene_sets: /mnt/f/13_scMR_/_data/analysis_borzoi_mr_sc/bulk_gsva_brain_model_gene_sets/brain_mr_model_gene_sets.tsv
+
+single_cell:
+  cellxgene_root: /home/moon/cellxgene
+  dlPFC_pd_normal_by_class: /home/moon/cellxgene/dlPFC_pd_normal_by_class
+  dlPFC_pd_normal_by_subclass: /home/moon/cellxgene/dlPFC_pd_normal_by_subclass
+  dlPFC_pd_normal_by_subtype: /home/moon/cellxgene/dlPFC_pd_normal_by_subtype
+  snPC_pd_normal_by_cell_type: /home/moon/cellxgene/snPC_pd_normal_by_cell_type
+
+figures:
+  figure2_dir: /mnt/f/13_scMR_/results/figure2
+  figure3_dir: /mnt/f/13_scMR_/results/figure3
+  figure4_dir: /mnt/f/13_scMR_/results/figure4
+  figure5_dir: /mnt/f/13_scMR_/results/figure5

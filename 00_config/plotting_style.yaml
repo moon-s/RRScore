@@ -1,0 +1,16 @@
+# Shared plotting style documentation. Existing figure scripts keep their current aesthetics unless they explicitly opt in.
+matplotlib:
+  dpi: 300
+  savefig_bbox: tight
+  font_family: DejaVu Sans
+  pdf_fonttype: 42
+  ps_fonttype: 42
+colors:
+  rls_case: '#D55E00'
+  control: '#0072B2'
+  positive_direction: '#C44E52'
+  negative_direction: '#4C72B0'
+  neutral: '#7F7F7F'
+notes:
+  - This file documents shared style intent for publication code organization.
+  - Do not use it to alter existing figure values or aesthetics unless explicitly requested.

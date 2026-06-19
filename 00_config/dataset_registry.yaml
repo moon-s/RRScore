@@ -1,0 +1,56 @@
+# Dataset registry for manuscript code. Entries document observed inputs/outputs and do not change analysis behavior.
+datasets:
+  dhs_snv:
+    role: Input variants overlapping neural DHS elements and FinnGen RLS summary statistics.
+    default_dir: /mnt/f/13_scMR_/_data/dhs_snv
+    large_input: true
+  mr_ready:
+    role: LD-clumped or pruned QTL/GWAS instruments for MR analyses.
+    default_dir: /mnt/f/13_scMR_/_data/MR_ready
+    large_input: true
+  borzoi_reference:
+    role: Borzoi model/reference genome inputs for expression delta scoring.
+    model_dir: /mnt/f/13_scMR_/_data/borzoi_model/flashzoi-replicate-0
+    genome_fasta: /mnt/f/13_scMR_/_data/hg_index/hg38.fa
+    annotation_gtf: /mnt/f/13_scMR_/_data/hg_index/hg38.refGene.gtf.gz
+    large_input: true
+  borzoi_outputs:
+    role: Regulatory variant, variant-gene, and expression-delta intermediate outputs.
+    default_dir: /mnt/f/13_scMR_/_data/processing_borzoi_outputs
+    key_files:
+      - expression_deltas.parquet
+      - regulatory_variants.parquet
+      - selected_regulatory_snv_dhs_per_gene.parquet
+      - step6_regulatory_to_gwas_ld_v3.parquet
+  mr_outputs:
+    role: RLS causal-gene MR tables used by downstream network and figure scripts.
+    default_dir: /mnt/f/13_scMR_/_data/rls_causal_genes
+    key_files:
+      - Table_S1_scMR_causal_genes.tsv
+      - Table_S2_bulk_causal_genes.tsv
+      - Table_S3_blood_scMR_causal_genes.tsv
+      - Table_S4_blood_bulk_causal_genes.tsv
+  network_outputs:
+    role: Graph/RWR/model outputs used for model diagnostics, Figure 3/4, and manuscript tables.
+    default_dir: /mnt/f/13_scMR_/_data/network/graph_learning_borzoi_mr
+    key_files:
+      - final_calibrated_brain_model/final_brain_gene_support_tiers.tsv
+      - gwas_linked_regulatory_variant_contributions.tsv.gz
+  gsva_outputs:
+    role: Bulk and single-cell GSVA/R-star tables used for Figure 4/5.
+    default_dir: /mnt/f/13_scMR_/_data/analysis_borzoi_mr_sc
+    key_dirs:
+      - bulk_gsva_brain_model_gene_sets
+      - singlecell_gsva_brain_model_gene_sets
+  single_cell_inputs:
+    role: PD/control h5ad matrices used by single-cell GSVA/R-star processing.
+    default_dir: /home/moon/cellxgene
+    large_input: true
+  manuscript_figures:
+    role: Final figure outputs for the manuscript.
+    default_dir: /mnt/f/13_scMR_/results
+    key_dirs:
+      - figure2
+      - figure3
+      - figure4
+      - figure5
