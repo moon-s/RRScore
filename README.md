@@ -1,6 +1,6 @@
 ## Integrating regulatory foundation models and network propagation reveals disease-associated brain regulatory programs in restless legs syndrome
 
-<img width="1599" height="935" alt="overview" src="https://github.com/user-attachments/assets/3803b635-4029-498d-9496-ba33d5e21ab0" />
+<img width="1401" height="938" alt="image" src="https://github.com/user-attachments/assets/dec3513d-a97f-4dad-868c-f037e52fec79" />
 
 # RLS Single-Cell MR / Borzoi / RWR / GSVA Manuscript Code
 
